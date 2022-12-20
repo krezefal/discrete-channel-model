@@ -13,7 +13,7 @@ def integrand(eta: np.float64, gamma: int) -> np.float64:
     q_func = 1 / np.sqrt(2*np.pi) * quad(lambda u: inner_integrand(u), eta + np.sqrt(2 * gamma), np.inf)[0]
     _1st_mult = (1 - q_func) ** (q-1)
     _2nd_mult = 1 / np.sqrt(2*np.pi)
-    _3rd_mult = np.exp(-((eta + np.sqrt(2 * gamma) - np.sqrt(2*gamma))**2) / 2)
+    _3rd_mult = np.exp(-((eta)**2) / 2)
     return _1st_mult * _2nd_mult * _3rd_mult
 
 
