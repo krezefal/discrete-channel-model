@@ -18,8 +18,9 @@ def main():
                 else:
                     mtx[i][l] = P_e / (q - 1)
 
-        render_3d(mtx, SNR, path='3d-plots/')
+        render_3d(mtx, SNR, show=True, path='3d-plots/')
         # print_2d(mtx)
+        # print()
 
 
 if __name__ == "__main__":
